@@ -37,6 +37,7 @@ Usage:
 
 
 PROJECT STRUCTURE
+
     PROJ_QALLP
     ├── main.py             # Main scraper script
     ├── requirements.txt    # Python dependencies
@@ -44,12 +45,14 @@ PROJECT STRUCTURE
     └── README.md           # This file
 
 Notes:
+
     - The script uses a free scraping method (no paid APIs required)
     - Rate limiting is built-in to avoid overwhelming the service
     - Data is automatically filtered to the last 24 hours
     - Virtual environment ensures compatibility with snscrape
 
 Troubleshooting:
+
     If you encounter issues:
         - Ensure Python 3.11.9 is installed correctly
         - Verify virtual environment is activated
