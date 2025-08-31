@@ -41,7 +41,7 @@ PROJECT STRUCTURE
     PROJ_QALLP
     ├── main.py             # Main scraper script
     ├── requirements.txt    # Python dependencies
-    ├── backup_tweets.csv   # Output file (generated after running)
+    ├── stock_market_tweets.csv   # Output file (generated after running)
     └── README.md           # This file
 
 Notes:
