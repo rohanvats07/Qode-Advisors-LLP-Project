@@ -8,6 +8,7 @@ Prerequisites
 This project requires Python 3.11.9 specifically due to snscrape compatibility requirements.
 
 Installation:
+
     Step 1: Install Python 3.11.9
         Visit: https://www.python.org/downloads/release/python-3119/
         Scroll down to the "Files" section
