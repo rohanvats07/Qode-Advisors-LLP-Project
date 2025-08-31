@@ -2,8 +2,8 @@ import snscrape.modules.twitter as sntwitter
 import pandas as pd
 from datetime import datetime, timedelta
 
-def backup_scraper():
-    """Scraper using snscrape (last 24 hours dynamically)"""
+def website_scraper():
+    """ Scraper using snscrape """
     hashtags = ['nifty50', 'sensex', 'intraday', 'banknifty']
     all_data = []
 
@@ -11,21 +11,19 @@ def backup_scraper():
     yesterday = (datetime.utcnow() - timedelta(days=1)).strftime("%Y-%m-%d")
 
     for hashtag in hashtags:
-        # Dynamic query for last 24 hours
         query = f"#{hashtag} since:{yesterday}"
         tweets = []
         
         for i, tweet in enumerate(sntwitter.TwitterSearchScraper(query).get_items()):
-            if i > 500:  # limit to avoid huge data (adjust/remove if needed)
+            if i > 500:  # limit to avoid huge data
                 break
             tweets.append([tweet.date, tweet.user.username, tweet.content])
         
-        # Convert to DataFrame
         df = pd.DataFrame(tweets, columns=["date", "user", "content"])
         all_data.append(df)
 
     # Combine all data
-    if all_data:  # avoid error if no tweets found
+    if all_data:
         final_df = pd.concat(all_data, ignore_index=True)
         final_df.to_csv('backup_tweets.csv', index=False)
         return final_df
@@ -35,6 +33,6 @@ def backup_scraper():
 
 
 if __name__ == "__main__":
-    df = backup_scraper()
+    df = website_scraper()
     print("Tweets saved to backup_tweets.csv")
     print(df.head())
