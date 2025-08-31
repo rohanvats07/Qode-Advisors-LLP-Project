@@ -25,7 +25,7 @@ def website_scraper():
     # Combine all data
     if all_data:
         final_df = pd.concat(all_data, ignore_index=True)
-        final_df.to_csv('backup_tweets.csv', index=False)
+        final_df.to_csv('stock_market_tweets.csv', index=False)
         return final_df
     else:
         print("No tweets found in the last 24 hours.")
@@ -34,5 +34,5 @@ def website_scraper():
 
 if __name__ == "__main__":
     df = website_scraper()
-    print("Tweets saved to backup_tweets.csv")
+    print("Tweets saved to stock_market_tweets.csv")
     print(df.head())
