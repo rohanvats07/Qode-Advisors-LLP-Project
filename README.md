@@ -38,11 +38,18 @@ Usage:
 
 PROJECT STRUCTURE
 
-    PROJ_QALLP
-    ├── main.py             # Main scraper script
-    ├── requirements.txt    # Python dependencies
-    ├── stock_market_tweets.csv   # Output file (generated after running)
-    └── README.md           # This file
+    PROJ_QALLP/
+    ├── main.py                          # Twitter scraping code (blocked by API)
+    ├── data_cleaning.py                 # Data cleaning and processing
+    ├── analysis_signal.py               # Signal analysis and visualization
+    ├── optimized_analysis.py            # Performance-optimized analysis
+    ├── requirements.txt                 # Required Python packages
+    ├── README.md                        # This documentation
+    ├── sample_stock_market_tweets.xlsx  # Sample data (AI-generated as Twitter Website Dont Allow Webscraping)
+    ├── cleaned_stock_market_tweets.csv  # Cleaned data
+    ├── trading_signals_analysis.csv     # Analysis results
+    ├── trading_signals_optimized.csv    # Optimized analysis results
+    └── trading_signals_analysis.png     # Visualization charts
 
 Notes:
 
